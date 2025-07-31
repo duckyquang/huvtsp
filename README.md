@@ -1,0 +1,115 @@
+# HUVTSP (Hydroelectric Utility Visualization and Technical Solutions Project)
+
+This repository contains the deliverables and development work for the HUVTSP project, focusing on data analysis, AI/ML applications, and system design for hydroelectric utility solutions.
+
+## Project Structure
+
+### 📂 Rayfield Week 2 Deliverable
+
+#### Day 1 & 2: Data Processing and Analysis
+- **`cleaned-date-code/`**: Data cleaning and processing scripts
+  - `read.py`: Main data reading and processing script
+  - `requirements.txt`: Python dependencies
+  - `README.txt`: Documentation for data processing
+- **`floating-solar-pv-data-report.pdf`**: Comprehensive report on floating solar PV data analysis
+
+#### Day 3 & 4: AI/ML Design and Planning
+- **`AI_ML Use Case List and Persona Matching.md`**: Detailed use cases and persona analysis for AI/ML applications
+- **`Annotated Diagram Notes.md`**: Technical notes and annotations for system diagrams
+- **`Edge Cases Document.md`**: Comprehensive edge case analysis and handling strategies
+- **`pipeline_v1.png`**: Initial system pipeline visualization
+- **`pipeline_with_ml.png`**: Enhanced pipeline with ML integration
+
+#### Day 5: System Design and Architecture
+- **`model_plan.md`**: Detailed AI model planning and architecture
+- **`system_flowchart.png`**: Complete system flowchart and architecture diagram
+- **`system_logic.md`**: System logic documentation and decision flows
+- **`Rayfield Systems Data Upload Demo.mov`**: *[Large file - not included in repository]*
+
+### 📂 Rayfield Week 3 Deliverable
+
+#### AI Model Development and Implementation
+- **`ai_model_dev.ipynb`**: Jupyter notebook with AI model development and experimentation
+- **`ai_module.py`**: Production-ready AI module implementation
+- **`main_pipeline.py`**: Main data processing and ML pipeline
+- **`gpt_summary.py`**: GPT-powered summary and analysis tools
+
+#### Results and Analysis
+- **`predictions.csv`**: Initial model predictions and results
+- **`tuned_predictions.csv`**: Optimized model predictions after tuning
+- **`anomaly_plot.png`**: Visualization of anomaly detection results
+- **`day2_team_tuning_notes.md`**: Team collaboration notes for model tuning
+- **`weekly_summary.txt`**: Summary of week 3 progress and achievements
+
+## Key Features
+
+### 🔍 Data Analysis
+- Comprehensive data cleaning and preprocessing
+- Floating solar PV data analysis and reporting
+- Anomaly detection and visualization
+
+### 🤖 AI/ML Components
+- Custom AI modules for utility data processing
+- Predictive modeling and forecasting
+- GPT integration for intelligent summaries
+- Model tuning and optimization workflows
+
+### 🏗️ System Architecture
+- Complete pipeline design from data ingestion to ML inference
+- Edge case handling and robust error management
+- Scalable system design for production deployment
+
+### 📊 Visualization and Reporting
+- System flowcharts and pipeline diagrams
+- Anomaly detection plots and analysis
+- Comprehensive documentation and technical reports
+
+## Getting Started
+
+### Prerequisites
+```bash
+# Install Python dependencies for data processing
+cd "Rayfield_Week 2 Deliverable/Day 1 & 2/cleaned-date-code"
+pip install -r requirements.txt
+```
+
+### Running the AI Pipeline
+```bash
+# Navigate to Week 3 deliverables
+cd "Rayfield_Week 3 Deliverable"
+
+# Run the main pipeline
+python main_pipeline.py
+
+# Or explore the development notebook
+jupyter notebook ai_model_dev.ipynb
+```
+
+## Technical Stack
+
+- **Python**: Core development language
+- **Jupyter Notebooks**: Interactive development and analysis
+- **AI/ML Libraries**: Custom implementations and integrations
+- **Data Processing**: Pandas, NumPy, and custom data handling
+- **Visualization**: Matplotlib, Plotly, and custom plotting tools
+
+## Documentation
+
+Each deliverable folder contains detailed documentation:
+- Technical specifications and requirements
+- Implementation notes and decisions
+- Edge case analysis and handling
+- Team collaboration and tuning notes
+
+## Project Timeline
+
+- **Week 2**: Data analysis, system design, and AI/ML planning
+- **Week 3**: AI model development, implementation, and optimization
+
+## Contributing
+
+This project represents deliverables for the HUVTSP initiative. For questions or collaboration opportunities, please refer to the detailed documentation in each deliverable folder.
+
+## License
+
+This project contains proprietary deliverables for HUVTSP. Please refer to appropriate licensing agreements for usage rights. 
