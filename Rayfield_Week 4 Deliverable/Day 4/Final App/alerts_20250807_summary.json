@@ -1,0 +1,22 @@
+{
+  "export_date": "2025-08-07",
+  "total_alerts": 5,
+  "severity_breakdown": {
+    "Normal": 5
+  },
+  "critical_alerts": 0,
+  "warning_alerts": 0,
+  "info_alerts": 0,
+  "avg_energy_output": 493.5045152383527,
+  "min_energy_output": 466.64359645859236,
+  "max_energy_output": 524.4933524285398,
+  "avg_deviation": 3.8120000000000003,
+  "max_deviation": 6.28,
+  "primary_trend": "Variable",
+  "systems_affected": 1,
+  "status": "Normal",
+  "export_timestamp": "2025-08-07T00:14:05.789415",
+  "recommendations": [
+    "Continue normal monitoring procedures"
+  ]
+}
