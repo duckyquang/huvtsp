@@ -338,7 +338,7 @@ def main():
     logger.info("Starting Alert Export System")
     
     # Create exporter
-    exporter = AlertExporter("./Final App")
+    exporter = AlertExporter("../../Final App")
     
     # Load or create sample data
     try:

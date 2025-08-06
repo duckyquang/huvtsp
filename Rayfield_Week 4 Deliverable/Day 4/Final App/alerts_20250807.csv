@@ -1,6 +1,0 @@
-alert_id,timestamp,energy_kwh,severity,anomaly_score,deviation_percentage,expected_min,expected_max,system_status,recommended_action,units_affected,trend_direction,created_at
-1,2025-08-07 06:00:00.781080,466.64359645859236,Normal,0.1467983561008608,5.44,447.18986786104904,539.8191626156564,Operating Normally,No action required,Primary System,Variable,2025-08-07 00:14:05
-2,2025-08-07 10:00:00.781080,509.5670655406815,Normal,0.3598528437324806,3.25,447.18986786104904,539.8191626156564,Operating Normally,No action required,Primary System,Variable,2025-08-07 00:14:05
-3,2025-08-07 14:00:00.781080,482.57365597929453,Normal,0.15502135295603015,2.21,447.18986786104904,539.8191626156564,Operating Normally,No action required,Primary System,Variable,2025-08-07 00:14:05
-4,2025-08-07 18:00:00.781080,484.24490578465554,Normal,0.2574269294896714,1.88,447.18986786104904,539.8191626156564,Operating Normally,No action required,Primary System,Variable,2025-08-07 00:14:05
-5,2025-08-07 22:00:00.781080,524.4933524285398,Normal,0.14184815819561256,6.28,447.18986786104904,539.8191626156564,Operating Normally,No action required,Primary System,Variable,2025-08-07 00:14:05

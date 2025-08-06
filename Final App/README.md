@@ -11,7 +11,26 @@ This is the production-ready web application for the HUVTSP energy monitoring sy
 - **Python** (v3.8 or higher)
 - **npm** or **yarn** package manager
 
-### 1. Frontend Setup (React Dashboard)
+### ⚡ One-Command Launch (Recommended)
+
+```bash
+# Launch the complete system (Frontend + Backend + Browser)
+python run_system.py
+```
+
+This unified launcher will:
+- ✅ Check all dependencies
+- ✅ Install frontend packages if needed
+- ✅ Start Flask backend (http://localhost:5000)
+- ✅ Start React frontend (http://localhost:8080)
+- ✅ Open browser automatically
+- ✅ Provide real-time system monitoring
+
+### 🔧 Manual Setup (Alternative)
+
+If you prefer to run components separately:
+
+#### 1. Frontend Setup (React Dashboard)
 
 ```bash
 # Install dependencies
@@ -27,7 +46,7 @@ npm run preview
 
 The React app will be available at: **http://localhost:8080**
 
-### 2. Backend Setup (Flask API)
+#### 2. Backend Setup (Flask API)
 
 ```bash
 # Install Python dependencies
@@ -54,7 +73,7 @@ streamlit run "Rayfield_Week 4 Deliverable/test_ui/streamlit_dashboard.py"
 ## 📁 Project Structure
 
 ```
-Final App/
+Final App/                              # 🎯 SINGLE CONSOLIDATED FINAL APP
 ├── src/                          # React source code
 │   ├── components/              # UI components
 │   │   ├── Dashboard.tsx        # Main dashboard (Enhanced with Week 4 features)
@@ -65,15 +84,19 @@ Final App/
 │   │   └── ExportSection.tsx    # Data export functionality
 │   └── pages/                   # Page components
 ├── public/                      # Static assets
+├── run_system.py               # 🚀 Unified system launcher (NEW)
 ├── app.py                      # Flask backend API (NEW)
 ├── ai_module.py                # Anomaly detection module
 ├── weekly_summary.txt          # AI summary text
 ├── alerts_today.csv           # Daily alert export (Generated)
+├── alerts_20250807_summary.json # Alert export metadata
 ├── predictions.csv            # ML model predictions
 ├── anomaly_plot.png           # Anomaly visualization
 ├── package.json               # Dependencies and scripts
 └── README.md                  # This file
 ```
+
+> **🎯 Note**: This is the **SINGLE CONSOLIDATED Final App folder** containing all production components. All duplicate folders have been removed and all functionality has been integrated into this unified structure.
 
 ## 🎯 Features
 
