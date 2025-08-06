@@ -8,6 +8,7 @@ import { FileUpload } from './FileUpload';
 import { AnomalyTable } from './AnomalyTable';
 import { ChartView } from './ChartView';
 import { ExportSection } from './ExportSection';
+import { SummarySection } from './SummarySection';
 import { Upload, Database, Brain, FileText } from 'lucide-react';
 
 interface ProcessingStatus {
@@ -178,26 +179,17 @@ export const Dashboard = () => {
                   </TabsContent>
                   
                   <TabsContent value="summary" className="mt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2 mb-4">
-                        <FileText className="h-5 w-5" />
-                        <h3 className="text-lg font-medium">GPT-Generated Summary</h3>
-                      </div>
-                      <div className="p-4 bg-muted rounded-lg">
-                        <p className="text-sm leading-relaxed">{summary}</p>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium mb-2 block">
-                          Edit Summary (Optional)
-                        </label>
-                        <Textarea 
-                          value={summary}
-                          onChange={(e) => setSummary(e.target.value)}
-                          placeholder="Edit the AI-generated summary..."
-                          className="min-h-[100px]"
-                        />
-                      </div>
-                    </div>
+                    <SummarySection 
+                      data={results}
+                      isProcessing={processing}
+                      onRefreshSummary={() => {
+                        setSummary('Refreshing AI summary...');
+                        // This would call the actual GPT API in production
+                        setTimeout(() => {
+                          setSummary('Updated analysis complete. 2 anomalies detected in the energy output data spanning January 15-19, 2024. Peak anomaly occurred on January 17th with significantly lower output (398.1 kWh). System recommends immediate inspection of equipment for potential maintenance needs.');
+                        }, 2000);
+                      }}
+                    />
                   </TabsContent>
                 </Tabs>
               </CardContent>

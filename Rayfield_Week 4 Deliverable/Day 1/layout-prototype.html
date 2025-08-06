@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUVTSP Dashboard - Layout Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .chart-placeholder {
+            background: linear-gradient(45deg, #f0f9ff 25%, transparent 25%),
+                        linear-gradient(-45deg, #f0f9ff 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #f0f9ff 75%),
+                        linear-gradient(-45deg, transparent 75%, #f0f9ff 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="zap" class="h-5 w-5 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">HUVTSP Dashboard</h1>
+                        <p class="text-sm text-gray-500">Hydroelectric Utility Visualization & Analytics</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        <i data-lucide="wifi" class="h-3 w-3 mr-1"></i>
+                        Live Data
+                    </span>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+                        <i data-lucide="settings" class="h-4 w-4 mr-2 inline"></i>
+                        Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left Column: File Upload & Chart -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- File Upload Section -->
+                <div class="bg-white rounded-xl shadow-sm border p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-gray-900">Data Upload</h2>
+                        <span class="text-sm text-gray-500">CSV Files Only</span>
+                    </div>
+                    
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors cursor-pointer">
+                        <i data-lucide="upload-cloud" class="h-12 w-12 text-gray-400 mx-auto mb-4"></i>
+                        <h3 class="text-sm font-medium text-gray-900 mb-2">Upload Energy Data</h3>
+                        <p class="text-sm text-gray-500 mb-4">Drag and drop your CSV file here, or click to browse</p>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+                            Choose File
+                        </button>
+                    </div>
+                    
+                    <!-- Processing Status -->
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-600">Processing Status</span>
+                            <span class="text-green-600">Ready</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Section -->
+                <div class="bg-white rounded-xl shadow-sm border p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-lg font-semibold text-gray-900">Energy Output Timeline</h2>
+                        <div class="flex items-center space-x-2">
+                            <span class="flex items-center text-sm text-gray-500">
+                                <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                                Normal
+                            </span>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                Anomaly
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Chart Placeholder -->
+                    <div class="chart-placeholder h-80 rounded-lg border flex items-center justify-center">
+                        <div class="text-center">
+                            <i data-lucide="bar-chart-3" class="h-16 w-16 text-gray-400 mx-auto mb-4"></i>
+                            <p class="text-gray-500 font-medium">Interactive Chart Will Load Here</p>
+                            <p class="text-sm text-gray-400 mt-2">Upload data to see real-time visualization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Summary & Alerts -->
+            <div class="space-y-6">
+                
+                <!-- AI Summary Section -->
+                <div class="bg-white rounded-xl shadow-sm border p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="file-text" class="h-5 w-5 text-blue-600"></i>
+                            <h2 class="text-lg font-semibold text-gray-900">AI Summary</h2>
+                        </div>
+                        <button class="p-1 hover:bg-gray-100 rounded">
+                            <i data-lucide="refresh-cw" class="h-4 w-4 text-gray-500"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-4 text-sm font-mono">
+                            <p class="text-gray-700 mb-2">🔍 <strong>Weekly Analysis Summary</strong></p>
+                            <p class="text-gray-600 mb-2">📊 168 records processed (Jan 15-21)</p>
+                            <p class="text-gray-600 mb-2">⚡ Avg output: 487.3 kWh</p>
+                            <p class="text-gray-600 mb-2">🚨 12 anomalies detected (7.1%)</p>
+                            <p class="text-gray-600">📈 2.3% improvement vs last week</p>
+                        </div>
+                        
+                        <button class="w-full text-sm text-blue-600 hover:text-blue-700 py-2">
+                            <i data-lucide="chevron-down" class="h-4 w-4 mr-1 inline"></i>
+                            Show Full Analysis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alerts Section -->
+                <div class="bg-white rounded-xl shadow-sm border p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="alert-triangle" class="h-5 w-5 text-amber-600"></i>
+                            <h2 class="text-lg font-semibold text-gray-900">Active Alerts</h2>
+                        </div>
+                        <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                            3 Critical
+                        </span>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <!-- Critical Alert -->
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-3">
+                            <div class="flex items-start justify-between">
+                                <div class="flex">
+                                    <i data-lucide="alert-circle" class="h-4 w-4 text-red-600 mt-0.5 mr-2"></i>
+                                    <div>
+                                        <p class="text-sm font-medium text-red-900">Low Output Detected</p>
+                                        <p class="text-xs text-red-700 mt-1">Jan 17, 06:00 - 298.1 kWh</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium text-red-800">Score: 0.92</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Warning Alert -->
+                        <div class="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                            <div class="flex items-start justify-between">
+                                <div class="flex">
+                                    <i data-lucide="alert-triangle" class="h-4 w-4 text-amber-600 mt-0.5 mr-2"></i>
+                                    <div>
+                                        <p class="text-sm font-medium text-amber-900">Performance Drop</p>
+                                        <p class="text-xs text-amber-700 mt-1">Jan 15, 14:00 - 485.2 kWh</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium text-amber-800">Score: 0.85</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Info Alert -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                            <div class="flex items-start justify-between">
+                                <div class="flex">
+                                    <i data-lucide="info" class="h-4 w-4 text-blue-600 mt-0.5 mr-2"></i>
+                                    <div>
+                                        <p class="text-sm font-medium text-blue-900">Maintenance Due</p>
+                                        <p class="text-xs text-blue-700 mt-1">Unit 3 - Scheduled check</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-medium text-blue-800">Info</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-4 text-sm text-gray-600 hover:text-gray-700 py-2 border-t border-gray-200">
+                        View All Alerts (12)
+                    </button>
+                </div>
+
+                <!-- Export Section -->
+                <div class="bg-white rounded-xl shadow-sm border p-6">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-4">Export & Actions</h2>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center justify-center">
+                            <i data-lucide="download" class="h-4 w-4 mr-2"></i>
+                            Export Report (PDF)
+                        </button>
+                        
+                        <button class="w-full bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 flex items-center justify-center">
+                            <i data-lucide="file-spreadsheet" class="h-4 w-4 mr-2"></i>
+                            Download Data (CSV)
+                        </button>
+                        
+                        <button class="w-full bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 flex items-center justify-center">
+                            <i data-lucide="share-2" class="h-4 w-4 mr-2"></i>
+                            Share Dashboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Simple interactivity for prototype
+        document.addEventListener('DOMContentLoaded', function() {
+            // File upload simulation
+            const uploadArea = document.querySelector('.border-dashed');
+            uploadArea.addEventListener('click', function() {
+                alert('File upload dialog would open here');
+            });
+            
+            // Refresh button simulation
+            const refreshBtn = document.querySelector('[data-lucide="refresh-cw"]').parentElement;
+            refreshBtn.addEventListener('click', function() {
+                const icon = this.querySelector('[data-lucide="refresh-cw"]');
+                icon.style.animation = 'spin 1s linear';
+                setTimeout(() => {
+                    icon.style.animation = '';
+                    alert('Summary refreshed!');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html> 
