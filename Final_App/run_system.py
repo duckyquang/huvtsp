@@ -27,17 +27,21 @@ def check_dependencies():
     
     # Check Python dependencies
     required_packages = [
-        'flask', 'flask_cors', 'pandas', 'numpy', 'scikit-learn'
+        ('flask', 'flask'),
+        ('flask-cors', 'flask_cors'), 
+        ('pandas', 'pandas'),
+        ('numpy', 'numpy'),
+        ('scikit-learn', 'sklearn')
     ]
     
     missing_packages = []
-    for package in required_packages:
+    for package_name, import_name in required_packages:
         try:
-            __import__(package.replace('-', '_'))
-            print(f"  ✅ {package}")
+            __import__(import_name)
+            print(f"  ✅ {package_name}")
         except ImportError:
-            missing_packages.append(package)
-            print(f"  ❌ {package} - Missing")
+            missing_packages.append(package_name)
+            print(f"  ❌ {package_name} - Missing")
     
     if missing_packages:
         print(f"\n⚠️  Missing Python packages: {', '.join(missing_packages)}")
